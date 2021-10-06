@@ -4,7 +4,7 @@ dui.appName = "DarkUI"
 ----------------------------------------
 -- Declarations
 ----------------------------------------
-local ADDON_VERSION = "2.67"
+local ADDON_VERSION = "2.68"
 local eso_root = "esoui/art/"
 local ui_root = "darkui/"
 
@@ -931,13 +931,13 @@ local function OnAddOnLoaded(eventCode, addOnName)
 	         RedirectTexture(eso_root .. theme_compass_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. theme_compass_textures[i][2])
 	      end
 	   end
-	   
+
 	   if dui.SV.Interact_Key == true then
 	 for i = 1, #theme_interactkey_textures do
 	         RedirectTexture(eso_root .. theme_interactkey_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. theme_interactkey_textures[i][2])
 			end
 		end
-	   
+
 	   if dui.SV.Darker_Bars == true then
 	      for i = 1, #darker_bar_textures do
 	         RedirectTexture(eso_root .. darker_bar_textures[i][1], ui_root .. common_textures_folder .. "/" .. darker_bar_textures[i][2])
@@ -946,14 +946,14 @@ local function OnAddOnLoaded(eventCode, addOnName)
 	      RedirectTexture(eso_root .. "unitattributevisualizer/targetbar_dynamic_fill.dds", ui_root .. common_textures_folder .. "/targetbar_dynamic_fill.dds")
 	      RedirectTexture(eso_root .. "unitattributevisualizer/targetbar_dynamic_leadingedge.dds", ui_root .. common_textures_folder .. "/targetbar_dynamic_leadingedge.dds")
 	   end
-	    
+
 	   if dui.SV.Hide_Status_Meter_Background == true then
 	      RedirectTexture(eso_root .. "performance/statusmetermunge.dds", ui_root .. common_textures_folder .. "/blank.dds")
 	   elseif dui.SV.Darker_Bars == true then
 	      RedirectTexture(eso_root .. "performance/statusmetermunge.dds", ui_root .. common_textures_folder .. "/statusmetermunge_ltp.dds")
 	   else
 	      RedirectTexture(eso_root .. "performance/statusmetermunge.dds", ui_root .. common_textures_folder .. "/statusmetermunge.dds")
-	   end 
+	   end
 	end
 	-- End Main Function
 
@@ -993,7 +993,7 @@ local function OnAddOnLoaded(eventCode, addOnName)
       theme = "mixed"
    else
       theme = "dark"
-   
+
    end
    if dui.SV.Quick_Menu_Color == GetString(SI_DARKUI_DARK) then
       quick_menu_color = "dark"
