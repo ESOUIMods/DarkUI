@@ -1,10 +1,10 @@
-## Title: |c7f7f7fDark|cada684UI|r v2.67
-## Version: 2.68
-## AddOnVersion: 268
+## Title: |c7f7f7fDark|cada684UI|r v2.69
+## Version: 2.69
+## AddOnVersion: 269
 ## Author: |cada684Jhenox|r
-## APIVersion: 101031 101032
+## APIVersion: 101032 101033
 ## SavedVariables: DarkUI_SavedVariables
-## DependsOn: LibAddonMenu-2.0>=32
+## DependsOn: LibAddonMenu-2.0>=33
 
 lang/en.lua
 lang/$(language).lua

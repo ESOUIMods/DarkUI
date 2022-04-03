@@ -4,7 +4,7 @@ dui.appName = "DarkUI"
 ----------------------------------------
 -- Declarations
 ----------------------------------------
-local ADDON_VERSION = "2.68"
+local ADDON_VERSION = "2.69"
 local eso_root = "esoui/art/"
 local ui_root = "darkui/"
 
