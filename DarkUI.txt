@@ -1,6 +1,6 @@
 ## Title: |c7f7f7fDark|cada684UI|r v2.69
-## Version: 2.70
-## AddOnVersion: 270
+## Version: 2.69
+## AddOnVersion: 269
 ## Author: |cada684Jhenox|r
 ## APIVersion: 101033 101034
 ## SavedVariables: DarkUI_SavedVariables
