@@ -4,7 +4,8 @@ dui.appName = "DarkUI"
 ----------------------------------------
 -- Declarations
 ----------------------------------------
-local ADDON_VERSION = "2.69"
+local ADDON_VERSION = "2.70"
+local SAVEDVARIABLES_VERSION = 3
 local eso_root = "esoui/art/"
 local ui_root = "darkui/"
 
@@ -985,7 +986,7 @@ local function OnAddOnLoaded(eventCode, addOnName)
      Hide_Status_Meter_Background = false
    }
 
-   dui.SV = ZO_SavedVars:NewAccountWide("DarkUI_SavedVariables", ADDON_VERSION, defaults, nil)
+  dui.SV = ZO_SavedVars:NewAccountWide("DarkUI_SavedVariables", SAVEDVARIABLES_VERSION, nil, defaults)
 
    if dui.SV.Icon == GetString(SI_DARKUI_LIGHT) then
       theme = "light"
