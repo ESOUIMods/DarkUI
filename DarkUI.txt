@@ -1,7 +1,7 @@
-## Title: |c7f7f7fDark|cada684UI|r v2.70
-## Version: 2.70
-## AddOnVersion: 270
-## Author: |cada684Jhenox|r
+## Title: |c7f7f7fDark|cada684UI|r v2.71
+## Version: 2.71
+## AddOnVersion: 271
+## Author: |cada684Jhenox|r, |cff9b15Sharlikran|r
 ## APIVersion: 101033 101034
 ## SavedVariables: DarkUI_SavedVariables
 ## DependsOn: LibAddonMenu-2.0>=33

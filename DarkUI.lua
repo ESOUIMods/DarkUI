@@ -4,7 +4,7 @@ dui.appName = "DarkUI"
 ----------------------------------------
 -- Declarations
 ----------------------------------------
-local ADDON_VERSION = "2.70"
+local ADDON_VERSION = "2.71"
 local SAVEDVARIABLES_VERSION = 3
 local eso_root = "esoui/art/"
 local ui_root = "darkui/"
@@ -969,6 +969,14 @@ local function OnAddOnLoaded(eventCode, addOnName)
    if addOnName ~= dui.appName then
       return
    end
+    if DarkUI_SavedVariables and
+        DarkUI_SavedVariables.Default and
+        DarkUI_SavedVariables.Default[GetDisplayName()] and
+        DarkUI_SavedVariables.Default[GetDisplayName()]["$AccountWide"] then
+        if type(DarkUI_SavedVariables.Default[GetDisplayName()]["$AccountWide"].version) == 'string' then
+          DarkUI_SavedVariables.Default[GetDisplayName()]["$AccountWide"].version = math.floor(tonumber(DarkUI_SavedVariables.Default[GetDisplayName()]["$AccountWide"].version))
+        end
+    end
 
    local defaults = {
      Icon = GetString(SI_DARKUI_DARK),
