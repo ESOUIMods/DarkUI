@@ -2,9 +2,10 @@
 ## Version: 2.72
 ## AddOnVersion: 272
 ## Author: |cada684Jhenox|r, |cff9b15Sharlikran|r
-## APIVersion: 101033 101034
+## APIVersion: 101035 101036
 ## SavedVariables: DarkUI_SavedVariables
 ## DependsOn: LibAddonMenu-2.0>=33
+## OptionalDependsOn: LuiExtended BanditsUserInterface
 
 lang/en.lua
 lang/$(language).lua
