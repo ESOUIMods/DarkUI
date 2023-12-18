@@ -1,13 +1,15 @@
-dui = {}
-dui.appName = "DarkUI"
+darkui = {}
+darkui.appName = "DarkUI"
 
 ----------------------------------------
 -- Declarations
 ----------------------------------------
-local ADDON_VERSION = "2.72"
+local ADDON_VERSION = "2.73"
 local SAVEDVARIABLES_VERSION = 3
 local eso_root = "esoui/art/"
 local ui_root = "darkui/"
+
+darkui.version = ADDON_VERSION
 
 local common_textures = {
   { "actionbar/quickslotbg.dds", "quickslotbg.dds" },
@@ -439,25 +441,51 @@ local theme_icons = {
   { "guild/tabicon_ranks_up.dds", "tabicon_ranks_up.dds" },
   { "guild/tabicon_roster_disabled.dds", "tabicon_roster_disabled.dds" },
   { "guild/tabicon_roster_up.dds", "tabicon_roster_up.dds" },
+  { "inventory/inventory_tabicon_1handed_up.dds", "inventory_tabicon_1handed_up.dds" },
+  { "inventory/inventory_tabicon_2handed_up.dds", "inventory_tabicon_2handed_up.dds" },
   { "inventory/inventory_tabicon_all_up.dds", "inventory_tabicon_all_up.dds" },
+  { "inventory/inventory_tabicon_appearance_up.dds", "inventory_tabicon_appearance_up.dds" },
   { "inventory/inventory_tabicon_armor_up.dds", "inventory_tabicon_armor_up.dds" },
+  { "inventory/inventory_tabicon_armorheavy_up.dds", "inventory_tabicon_armorheavy_up.dds" },
+  { "inventory/inventory_tabicon_armorlight_up.dds", "inventory_tabicon_armorlight_up.dds" },
+  { "inventory/inventory_tabicon_armormedium_up.dds", "inventory_tabicon_armormedium_up.dds" },
+  { "inventory/inventory_tabicon_bait_up.dds", "inventory_tabicon_bait_up.dds" },
+  { "inventory/inventory_tabicon_bow_up.dds", "inventory_tabicon_bow_up.dds" },
+  { "inventory/inventory_tabicon_companion_up.dds", "inventory_tabicon_companion_up.dds" },
   { "inventory/inventory_tabicon_consumables_up.dds", "inventory_tabicon_consumables_up.dds" },
+  { "inventory/inventory_tabicon_container_up.dds", "inventory_tabicon_container_up.dds" },
   { "inventory/inventory_tabicon_craftbag_alchemy_up.dds", "inventory_tabicon_craftbag_alchemy_up.dds" },
   { "inventory/inventory_tabicon_craftbag_blacksmithing_up.dds", "inventory_tabicon_craftbag_blacksmithing_up.dds" },
   { "inventory/inventory_tabicon_craftbag_clothing_up.dds", "inventory_tabicon_craftbag_clothing_up.dds" },
   { "inventory/inventory_tabicon_craftbag_enchanting_up.dds", "inventory_tabicon_craftbag_enchanting_up.dds" },
   { "inventory/inventory_tabicon_craftbag_itemtrait_up.dds", "inventory_tabicon_craftbag_itemtrait_up.dds" },
+  { "inventory/inventory_tabicon_craftbag_jewelrycrafting_up.dds", "inventory_tabicon_craftbag_jewelrycrafting_up.dds" },
   { "inventory/inventory_tabicon_craftbag_provisioning_up.dds", "inventory_tabicon_craftbag_provisioning_up.dds" },
   { "inventory/inventory_tabicon_craftbag_stylematerial_up.dds", "inventory_tabicon_craftbag_stylematerial_up.dds" },
   { "inventory/inventory_tabicon_craftbag_up.dds", "inventory_tabicon_craftbag_up.dds" },
   { "inventory/inventory_tabicon_craftbag_woodworking_up.dds", "inventory_tabicon_craftbag_woodworking_up.dds" },
-  { "inventory/inventory_tabicon_craftbag_jewelrycrafting_up.dds", "inventory_tabicon_craftbag_jewelrycrafting_up.dds" },
   { "inventory/inventory_tabicon_crafting_up.dds", "inventory_tabicon_crafting_up.dds" },
+  { "inventory/inventory_tabicon_crown_up.dds", "inventory_tabicon_crown_up.dds" },
+  { "inventory/inventory_tabicon_damagestaff_up.dds", "inventory_tabicon_damagestaff_up.dds" },
+  { "inventory/inventory_tabicon_furnishing_craftstation_up.dds", "inventory_tabicon_furnishing_craftstation_up.dds" },
+  { "inventory/inventory_tabicon_furnishing_lighting_up.dds", "inventory_tabicon_furnishing_lighting_up.dds" },
+  { "inventory/inventory_tabicon_furnishing_material_up.dds", "inventory_tabicon_furnishing_material_up.dds" },
+  { "inventory/inventory_tabicon_furnishing_seating_up.dds", "inventory_tabicon_furnishing_seating_up.dds" },
+  { "inventory/inventory_tabicon_furnishing_targetdummy_up.dds", "inventory_tabicon_furnishing_targetdummy_up.dds" },
+  { "inventory/inventory_tabicon_healstaff_up.dds", "inventory_tabicon_healstaff_up.dds" },
   { "inventory/inventory_tabicon_items_up.dds", "inventory_tabicon_items_up.dds" },
   { "inventory/inventory_tabicon_junk_up.dds", "inventory_tabicon_junk_up.dds" },
   { "inventory/inventory_tabicon_misc_up.dds", "inventory_tabicon_misc_up.dds" },
   { "inventory/inventory_tabicon_quest_up.dds", "inventory_tabicon_quest_up.dds" },
   { "inventory/inventory_tabicon_quickslot_up.dds", "inventory_tabicon_quickslot_up.dds" },
+  { "inventory/inventory_tabicon_recipe_up.dds", "inventory_tabicon_recipe_up.dds" },
+  { "inventory/inventory_tabicon_repair_up.dds", "inventory_tabicon_repair_up.dds" },
+  { "inventory/inventory_tabicon_shield_up.dds", "inventory_tabicon_shield_up.dds" },
+  { "inventory/inventory_tabicon_siege_up.dds", "inventory_tabicon_siege_up.dds" },
+  { "inventory/inventory_tabicon_soulgem_up.dds", "inventory_tabicon_soulgem_up.dds" },
+  { "inventory/inventory_tabicon_tool_up.dds", "inventory_tabicon_tool_up.dds" },
+  { "inventory/inventory_tabicon_trash_up.dds", "inventory_tabicon_trash_up.dds" },
+  { "inventory/inventory_tabicon_trophy_up.dds", "inventory_tabicon_trophy_up.dds" },
   { "inventory/inventory_tabicon_weapons_up.dds", "inventory_tabicon_weapons_up.dds" },
   { "journal/journal_tabicon_achievements_disabled.dds", "journal_tabicon_achievements_disabled.dds" },
   { "journal/journal_tabicon_achievements_up.dds", "journal_tabicon_achievements_up.dds" },
@@ -824,21 +852,18 @@ local theme_interactkey_textures = {
 -- Functions
 ----------------------------------------
 local function OnAddOnLoaded(eventCode, addOnName)
-  -- Main Function
-  local function duiDark()
-    ZO_ActionBar1KeybindBG:SetAlpha(0)
-    for i = 1, #common_textures do
-      RedirectTexture(eso_root .. common_textures[i][1], ui_root .. common_textures_folder .. "/" .. common_textures[i][2])
-    end
-    for i = 1, #theme_textures do
-      RedirectTexture(eso_root .. theme_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. theme_textures[i][2])
-    end
-    --   if theme == "dark" then
-    --      for i = 1, #dark_textures do
-    --         RedirectTexture(eso_root .. dark_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. dark_textures[i][2])
-    --      end
-    --   end
-    if dui.SV.Theme_Overlay == true then
+  if addOnName ~= darkui.appName then
+    return
+  end
+  local theme
+  local quick_menu_color
+  local quickslot_highlight_blob_blue
+  local quickslot_highlight_blob_dark
+  local quickslot_highlight_blob_light
+  local common_textures_folder
+
+  local function duiBarTextures()
+    if darkui.SV.Theme_Overlay == true then
       for i = 1, #common_bar_textures do
         RedirectTexture(eso_root .. common_bar_textures[i][1], ui_root .. common_textures_folder .. common_bar_textures[i][2])
       end
@@ -848,7 +873,7 @@ local function OnAddOnLoaded(eventCode, addOnName)
       for i = 1, #bar_overlay_textures do
         RedirectTexture(eso_root .. bar_overlay_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. bar_overlay_textures[i][3])
       end
-    elseif dui.SV.Glossy == true then
+    elseif darkui.SV.Glossy == true then
       for i = 1, #bar_textures do
         RedirectTexture(eso_root .. bar_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. bar_textures[i][3])
       end
@@ -866,6 +891,23 @@ local function OnAddOnLoaded(eventCode, addOnName)
         RedirectTexture(eso_root .. bar_overlay_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. bar_overlay_textures[i][2])
       end
     end
+  end
+
+  local function duiDark()
+    ZO_ActionBar1KeybindBG:SetAlpha(0)
+    for i = 1, #common_textures do
+      RedirectTexture(eso_root .. common_textures[i][1], ui_root .. common_textures_folder .. "/" .. common_textures[i][2])
+    end
+    for i = 1, #theme_textures do
+      RedirectTexture(eso_root .. theme_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. theme_textures[i][2])
+    end
+    --   if theme == "dark" then
+    --      for i = 1, #dark_textures do
+    --         RedirectTexture(eso_root .. dark_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. dark_textures[i][2])
+    --      end
+    --   end
+
+    duiBarTextures() -- previously, if then statements
 
     if quick_menu_color == "dark" then
       for i = 1, #quick_menu_textures do
@@ -889,13 +931,13 @@ local function OnAddOnLoaded(eventCode, addOnName)
       RedirectTexture(eso_root .. "quickslots/quickslot_highlight_blob.dds", ui_root .. common_textures_folder .. "/" .. quickslot_highlight_blob_blue)
     end
 
-    if dui.SV.Gamepad_Grayscale_Buttons == true then
+    if darkui.SV.Gamepad_Grayscale_Buttons == true then
       for i = 1, #gamepad_grayscale_buttons do
         RedirectTexture(eso_root .. gamepad_grayscale_buttons[i][1], ui_root .. common_textures_folder .. "/" .. gamepad_grayscale_buttons[i][2])
       end
     end
 
-    if dui.SV.Low_Transparency_Backgrounds == true then
+    if darkui.SV.Low_Transparency_Backgrounds == true then
       for i = 1, #backgrounds do
         RedirectTexture(eso_root .. backgrounds[i][1], ui_root .. common_textures_folder .. "/" .. backgrounds[i][3])
       end
@@ -911,13 +953,13 @@ local function OnAddOnLoaded(eventCode, addOnName)
       end
     end
 
-    if dui.SV.Use_Icons ~= false then
+    if darkui.SV.Use_Icons ~= false then
       for i = 1, #theme_icons do
         RedirectTexture(eso_root .. theme_icons[i][1], ui_root .. "theme_" .. theme .. "/" .. theme_icons[i][2])
       end
     end
 
-    if dui.SV.Compass_Angled == true then
+    if darkui.SV.Compass_Angled == true then
       for i = 1, #common_compass_textures do
         RedirectTexture(eso_root .. common_compass_textures[i][1], ui_root .. common_textures_folder .. "/" .. common_compass_textures[i][3])
       end
@@ -933,13 +975,13 @@ local function OnAddOnLoaded(eventCode, addOnName)
       end
     end
 
-    if dui.SV.Interact_Key == true then
+    if darkui.SV.Interact_Key == true then
       for i = 1, #theme_interactkey_textures do
         RedirectTexture(eso_root .. theme_interactkey_textures[i][1], ui_root .. "theme_" .. theme .. "/" .. theme_interactkey_textures[i][2])
       end
     end
 
-    if dui.SV.Darker_Bars == true then
+    if darkui.SV.Darker_Bars == true then
       for i = 1, #darker_bar_textures do
         RedirectTexture(eso_root .. darker_bar_textures[i][1], ui_root .. common_textures_folder .. "/" .. darker_bar_textures[i][2])
       end
@@ -948,27 +990,24 @@ local function OnAddOnLoaded(eventCode, addOnName)
       RedirectTexture(eso_root .. "unitattributevisualizer/targetbar_dynamic_leadingedge.dds", ui_root .. common_textures_folder .. "/targetbar_dynamic_leadingedge.dds")
     end
 
-    if dui.SV.Hide_Status_Meter_Background == true then
+    if darkui.SV.Hide_Status_Meter_Background == true then
       RedirectTexture(eso_root .. "performance/statusmetermunge.dds", ui_root .. common_textures_folder .. "/blank.dds")
-    elseif dui.SV.Darker_Bars == true then
+    elseif darkui.SV.Darker_Bars == true then
       RedirectTexture(eso_root .. "performance/statusmetermunge.dds", ui_root .. common_textures_folder .. "/statusmetermunge_ltp.dds")
     else
       RedirectTexture(eso_root .. "performance/statusmetermunge.dds", ui_root .. common_textures_folder .. "/statusmetermunge.dds")
     end
   end
-  -- End Main Function
 
   local function duiGroupFrame()
     RedirectTexture(eso_root .. "unitframes/unitframe_group_right.dds", ui_root .. common_textures_folder .. "/blank.dds")
-    if dui.SV.Hide_Group_Frame_Background == true then
+    if darkui.SV.Hide_Group_Frame_Background == true then
       RedirectTexture(eso_root .. "unitframes/unitframe_group_left.dds", ui_root .. common_textures_folder .. "/blank.dds")
     else
       RedirectTexture(eso_root .. "unitframes/unitframe_group_left.dds", ui_root .. common_textures_folder .. "/unitframe_group_left.dds")
     end
   end
-  if addOnName ~= dui.appName then
-    return
-  end
+
   if DarkUI_SavedVariables and
     DarkUI_SavedVariables.Default and
     DarkUI_SavedVariables.Default[GetDisplayName()] and
@@ -982,39 +1021,51 @@ local function OnAddOnLoaded(eventCode, addOnName)
   end
 
   local defaults = {
-    Icon = GetString(SI_DARKUI_DARK),
-    Quick_Menu_Color = GetString(SI_DARKUI_BLUE),
+    Icon = GetString(DARKUI_DARK),
+    Quick_Menu_Color = GetString(DARKUI_BLUE),
     Glossy = false,
     Compass_Angled = false,
     Interact_Key = false,
     Darker_Bars = false,
+    Bar_Textures_Only = false,
     Hide_Group_Frame_Background = false,
     Gamepad_Grayscale_Buttons = false,
     Non_Transparent_Backgrounds = false,
     Use_Icons = true,
     Smooth_Backgrounds = false,
     Quick_Menu_Skooma_Eye = false,
-    Hide_Status_Meter_Background = false
+    Hide_Status_Meter_Background = false,
+    version = SAVEDVARIABLES_VERSION,
   }
 
-  dui.SV = ZO_SavedVars:NewAccountWide("DarkUI_SavedVariables", SAVEDVARIABLES_VERSION, nil, defaults)
+  darkui.SV = ZO_SavedVars:NewAccountWide("DarkUI_SavedVariables", SAVEDVARIABLES_VERSION, nil, defaults)
 
-  if dui.SV.Icon == GetString(SI_DARKUI_LIGHT) then
+  local sv = DarkUI_SavedVariables["Default"][GetDisplayName()]["$AccountWide"]
+  -- Clean up saved variables (from previous versions)
+  for key, _ in pairs(sv) do
+    -- Delete key-value pair if the key can't also be found in the default settings (except for version)
+    if key ~= "version" and defaults[key] == nil then
+      sv[key] = nil
+    end
+  end
+
+  if darkui.SV.Icon == GetString(DARKUI_LIGHT) then
     theme = "light"
-  elseif dui.SV.Icon == GetString(SI_DARKUI_MIXED) then
+  elseif darkui.SV.Icon == GetString(DARKUI_MIXED) then
     theme = "mixed"
   else
     theme = "dark"
-
   end
-  if dui.SV.Quick_Menu_Color == GetString(SI_DARKUI_DARK) then
+
+  if darkui.SV.Quick_Menu_Color == GetString(DARKUI_DARK) then
     quick_menu_color = "dark"
-  elseif dui.SV.Quick_Menu_Color == GetString(SI_DARKUI_LIGHT) then
+  elseif darkui.SV.Quick_Menu_Color == GetString(DARKUI_LIGHT) then
     quick_menu_color = "light"
   else
     quick_menu_color = "blue"
   end
-  if dui.SV.Quick_Menu_Skooma_Eye == true then
+
+  if darkui.SV.Quick_Menu_Skooma_Eye == true then
     quickslot_highlight_blob_blue = "quickslot_highlight_blob_blue_skooma_eye.dds"
     quickslot_highlight_blob_dark = "quickslot_highlight_blob_dark_skooma_eye.dds"
     quickslot_highlight_blob_light = "quickslot_highlight_blob_light_skooma_eye.dds"
@@ -1023,18 +1074,23 @@ local function OnAddOnLoaded(eventCode, addOnName)
     quickslot_highlight_blob_dark = "quickslot_highlight_blob_dark.dds"
     quickslot_highlight_blob_light = "quickslot_highlight_blob_light.dds"
   end
-  if dui.SV.Smooth_Backgrounds == true then
+
+  if darkui.SV.Smooth_Backgrounds == true then
     common_textures_folder = "common_textures_smooth"
   else
     common_textures_folder = "common_textures"
   end
 
-  duiDark()
-  duiGroupFrame()
-  dui:initLAM()
+  if darkui.SV.Bar_Textures_Only then
+    duiBarTextures()
+  else
+    duiDark()
+    duiGroupFrame()
+  end
+  darkui:initLAM()
 end
 
 ----------------------------------------
 -- Main
 ----------------------------------------
-EVENT_MANAGER:RegisterForEvent(dui.appName, EVENT_ADD_ON_LOADED, OnAddOnLoaded)
+EVENT_MANAGER:RegisterForEvent(darkui.appName, EVENT_ADD_ON_LOADED, OnAddOnLoaded)

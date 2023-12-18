@@ -1,10 +1,10 @@
-## Title: |c7f7f7fDark|cada684UI|r v2.72
-## Version: 2.72
-## AddOnVersion: 272
+## Title: |c7f7f7fDark|cada684UI|r v2.73
+## Version: 2.73
+## AddOnVersion: 273
 ## Author: |cada684Jhenox|r, |cff9b15Sharlikran|r
-## APIVersion: 101038 101039
+## APIVersion: 101039 101040
 ## SavedVariables: DarkUI_SavedVariables
-## DependsOn: LibAddonMenu-2.0>=34
+## DependsOn: LibAddonMenu-2.0>=35
 ## OptionalDependsOn: LuiExtended BanditsUserInterface
 
 lang/en.lua
